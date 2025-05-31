@@ -1,0 +1,42 @@
+# Dependencies
+node_modules
+.pnpm-store
+.pnpm-debug.log
+
+# Build output
+build
+dist
+.next
+out
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# IDE and editor files
+.idea
+.vscode
+*.swp
+*.swo
+.DS_Store
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporary files
+*.log
+*.tmp
+.temp
+.cache
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Other
+LICENSE
