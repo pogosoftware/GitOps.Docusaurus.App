@@ -39,8 +39,8 @@ jobs:
         with:
           images: ${{ vars.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=pr
-            type=sha,format=short
+            type=sha,format=short,enable=${{ github.event_name == 'pull_request' }}
+            type=raw,value=latest,enable=${{ github.event_name == 'push' }}
         env:
           DOCKER_METADATA_PR_HEAD_SHA: true
           DOCKER_METADATA_SHORT_SHA_LENGTH: 8
