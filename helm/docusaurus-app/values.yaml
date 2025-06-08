@@ -1,5 +1,6 @@
 replicaCount: 1
 name: docusaurus-app
+host: dev.iamroot.sh
 image:
   repository: pogosoftware/docusaurus-app
-  tag: sha-73f56dd 
+  tag: latest
