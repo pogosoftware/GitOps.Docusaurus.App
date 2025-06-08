@@ -1,0 +1,7 @@
+replicaCount: 1
+name: docusaurus-app
+host: dev.iamroot.sh
+certificate: dev-iam-root-sh
+image:
+  repository: pogosoftware/docusaurus-app
+  tag: latest
