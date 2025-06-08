@@ -37,7 +37,7 @@ jobs:
           images: ${{ vars.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=pr
-            type=raw,value=${{ github.sha }}
+            type=raw,value=${{ github.event.pull_request.head.sha }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
