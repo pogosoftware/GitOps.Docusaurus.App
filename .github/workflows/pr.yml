@@ -1,8 +1,11 @@
-name: PR Preview
+name: Build documentation
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
 
 env:
   IMAGE_NAME: docusaurus-app
@@ -52,3 +55,4 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - uses: actions/labeler@v5
+        if: github.event_name == 'pull_request' && github.event.pull_request.state != 'closed'
