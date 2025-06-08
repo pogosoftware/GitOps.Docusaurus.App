@@ -12,7 +12,7 @@ spec:
   tls:
     - hosts:
         - {{ .Values.host }}
-      secretName: dev-iam-root-sh-wildcard
+      secretName: {{ .Values.certificate }}
   rules:
     - host: {{ .Values.host }}
       http:
